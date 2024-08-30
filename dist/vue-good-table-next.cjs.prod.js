@@ -10081,8 +10081,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                         onMouseenter: $event => ($options.onMouseenter(row, index)),
                         onMouseleave: $event => ($options.onMouseleave(row, index)),
                         onDblclick: $event => ($options.onRowDoubleClicked(row, index, $event)),
-                        onClick: $event => ($options.onRowClicked(row, index, $event)),
-                        onAuxclick: $event => ($options.onRowAuxClicked(row, index, $event))
+			onClick: $event => ($options.onRowClicked(row, row.originalIndex, $event)),
+		        onAuxclick: $event => ($options.onRowAuxClicked(row, index, $event))
                       }, [
                         ($props.lineNumbers)
                           ? (vue.openBlock(), vue.createElementBlock("th", _hoisted_8, vue.toDisplayString($options.getCurrentIndex(row.originalIndex)), 1 /* TEXT */))
