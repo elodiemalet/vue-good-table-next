@@ -10129,8 +10129,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                         }), 256 /* UNKEYED_FRAGMENT */))
                       ], 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_7))
                     : vue.createCommentVNode("v-if", true),
-                  (_ctx.expandedRowIndex === index)
-                    ? (vue.openBlock(), vue.createElementBlock("tr", {
+		(_ctx.expandedRowIndex === row.originalIndex & ($props.groupOptions.collapsable ? headerRow.vgtIsExpanded : true))
+			? (vue.openBlock(), vue.createElementBlock("tr", {
                         class: vue.normalizeClass($props.expandedRowDetailClasses),
                         key: row.originalIndex
                       }, [
